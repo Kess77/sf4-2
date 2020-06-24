@@ -63,7 +63,7 @@ class ProductRepository extends ServiceEntityRepository
 
     /*
      * SELECT t0.id , t0.name,
-     * FROM product t0
+     * FROM product t0p
      * WHERE t0.created_at <= :last_month
      * ORDER BY t0.created_at
      */
