@@ -47,4 +47,24 @@ class ProductRepository extends ServiceEntityRepository
         ;
     }
     */
+    /**
+     * Récuperer les nouveaux produits créés il y a moins d'1mois
+     */
+    public function findNews()
+    {
+        // création de queryBuilder (constructeur de requête)
+        return $this->createQueryBuilder('p')                                   #'p' = alias de product
+                    ->where('p.createdAt >= :last_month')
+                    ->setParameter('last_month',new \DateTime('-1month')) // equivalent de bindValue
+                    ->orderBy('p.createdAt','DESC')
+                    ->getQuery()                                                     //recuperer les resultat et obtenir la requete
+                    ->getResult();                                                   //retourne resultat avec un tableau
+    }
+
+    /*
+     * SELECT t0.id , t0.name,
+     * FROM product t0
+     * WHERE t0.created_at <= :last_month
+     * ORDER BY t0.created_at
+     */
 }
