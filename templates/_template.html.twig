@@ -26,12 +26,24 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary is-small" href="#">
-                            <strong>Inscription</strong>
+                        {# APP variable globales twig#}
+                        {% if app.user %}
+                            <a class="button is-primary is-small" href="#">
+                                <span class="icon"><i class="fas fa-user-circle"></i></span>
+                                <strong>{{ app.user.username }}</strong>
+                            </a>
+                            <a class="button is-light is-small" href="{{ path('app_logout') }}">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Connexion
+                            </a>
+                        {% else %}
+                            <a class="button is-primary is-small" href="#">
+                                <strong>Inscription</strong>
+                            </a>
+                            <a class="button is-light is-small" href="{{ path('app_login') }}">
+                                Connexion
                         </a>
-                        <a class="button is-light is-small" href="#">
-                            Connexion
-                        </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
