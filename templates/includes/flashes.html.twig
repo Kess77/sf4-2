@@ -1,0 +1,15 @@
+{# includes les messages flashes #}
+
+    {# key : type
+        valeur: message qui est un autre tableau
+    #}
+
+{% for type,message in app.flashes() %}
+    {% for message in message %}
+        <div class="notification is-{{ type }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
+
+        .
