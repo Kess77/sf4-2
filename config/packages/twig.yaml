@@ -4,4 +4,4 @@ twig:
     strict_variables: '%kernel.debug%'
     exception_controller: null
     #enregistrement du themes de formulaires pour Bulma
-    form_themes: ['includes/-form_theme_bulma.html.twig']
+    form_themes: ['includes/_form_theme_bulma.html.twig']
