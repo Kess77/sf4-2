@@ -3,6 +3,9 @@
         {{ form_row(product_form.name, {
             label: 'Nom du produit:'
         }) }}
+        {{ form_row(product_form.category,{
+            label:'Catégorie de produit'
+        }) }}
 
         {{ form_row(product_form.description, {
             label: 'Description:'
@@ -11,6 +14,7 @@
         {{ form_row(product_form.price, {
             label: 'Prix:'
         }) }}
+
 
 <button type="submit" class="button is-success is-fullwidth">
     Enregistrer
