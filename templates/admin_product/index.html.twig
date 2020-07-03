@@ -18,6 +18,7 @@
                     <th>#</th>
                     <th>Nom</th>
                     <th>Description</th>
+                    <th> Categorie</th>
                     <th>Prix</th>
                     <th>Création</th>
                     <th></th>
@@ -36,6 +37,9 @@
                         <td >
                             {{  product.description | slice(0, 25)}}
                         </td>
+                        <td>
+                            {{ product.category.name }}
+                        </td>
                         <td >
                             {{  product.priceFloat |number_format(2,'.','') }}  €
                         </td>
@@ -47,7 +51,7 @@
                                 <a  href= "{{ path('admin_product_delete',{id:product.id}) }}" class="button is-danger">Supprimer</a>
                             </div>
                         </td>
-Ò
+
                     </tr>
                 {% endfor %}
 

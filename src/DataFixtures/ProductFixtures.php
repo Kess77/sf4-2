@@ -25,7 +25,7 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
                 ->setCreatedAt($faker->dateTimeBetween('-6 months'))
             ;
             // Récupération aléatoire d'une catégorie par une référence
-            $categoryReference = 'Category_'. $faker->numberBetween(0, 2);
+            $categoryReference = 'category_'. $faker->numberBetween(0, 2);
             /**
              * @var Category $category
              */

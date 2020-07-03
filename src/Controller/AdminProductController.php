@@ -95,8 +95,5 @@ class AdminProductController extends AbstractController
             'product'=>$product,
             'deletion_form'=>$form->createView()
         ]);
-
-
-
     }
 }

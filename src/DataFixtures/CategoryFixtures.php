@@ -26,7 +26,7 @@ CategoryFixtures extends Fixture
             $manager->persist($category);
 
          // Définir une référence surl'entité, pour le récupérer dans d'autres fixtures (etiquette)
-            $reference ='Category_'.$i;
+            $reference ='category_'.$i;
             $this->addReference($reference,$category);
         }
 
