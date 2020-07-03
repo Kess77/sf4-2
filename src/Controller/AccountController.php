@@ -13,7 +13,7 @@ class AccountController extends AbstractController
 {
     /**
      * @Route("/account/profile", name="account_profile")
-     * Autoriser l'accés uniquenement aux utilisateurs connéctés (est-ce que l'accés es accordé)
+     * Autoriser l'accés uniquenement aux utilisateurs connéctés (est-ce que l'accés est accordé)
      * @IsGranted("ROLE_USER")
      */
     public function index(Request $request, EntityManagerInterface $entityManager)
