@@ -8,6 +8,10 @@
     <div class="section">
         <h1 class="title">Accueil - Nouveautés</h1>
 
+        {% for category in categories %}
+
+            <div> {{ category }}</div>
+        {% endfor %}
         {# INclusion de fichiers & passage de variables#}
        {% include 'includes/product_list.html.twig' with {products:new_products} %}
 

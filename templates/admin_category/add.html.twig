@@ -1,0 +1,23 @@
+{% extends "_admin_template.html.twig" %}
+
+{% block title %}
+    Nouveau categorie
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Nouveau produit</h1>
+
+        {{ form_start(category_form) }}
+
+        {{ form_row(category_form.name, {
+            label: 'Nom du Categorie:'
+        }) }}
+        <button type="submit" class="button is-success is-fullwidth">
+            Enregistrer
+        </button>
+
+
+         {{ form_end(category_form) }}
+    </div>
+{% endblock %}
